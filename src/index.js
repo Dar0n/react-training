@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Video9 from './Video9';
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Video9 />, document.getElementById('root'));
