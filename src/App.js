@@ -32,7 +32,11 @@ const Heart = () => <span>&hearts;</span>
 
 // const App = () => <h1>Olala!</h1>
 App.propTypes = {
-  txt: propTypes.string,
+  txt(props, propName, component){
+    if (!(propName in props)) {
+      return new Error(`Missing prop ${propName} in ${component}`);
+    }
+  },
   nmbr: propTypes.number.isRequired,
 }
 
