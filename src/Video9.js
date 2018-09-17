@@ -5,18 +5,26 @@ class Video9 extends React.Component {
     super();
     this.state = {
       currentEvent: '---',
+      a: '',
+      b: '',
     }
     this.update = this.update.bind(this);
   }
   update (e) {
     this.setState({
-      currentEvent: e.type,
+      a: this.refs.a.value,
+      b: this.refs.b.value,
     })
   }
+  // update (e) {
+  //   this.setState({
+  //     currentEvent: e.type,
+  //   })
+  // }
   render() {
     return (
       <div>
-        <textarea cols='50' rows='20' 
+        {/* <textarea cols='50' rows='20' 
           onKeyPress={this.update}
           onFocus={this.update}
           onBlur={this.update}
@@ -25,7 +33,10 @@ class Video9 extends React.Component {
           onMouseLeave={this.update}
           onCopy={this.update}
         />
-      <h1>{this.state.currentEvent}</h1>
+      <h1>{this.state.currentEvent}</h1> */}
+      <input ref='a' type='text' onChange={this.update} />{this.state.a}
+      <hr />
+      <input ref='b' type='text' onChange={this.update} />{this.state.b}
       </div>
     )
   }
