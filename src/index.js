@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Video15 from './Video15';
+import Video18 from './Video18';
 
 
-ReactDOM.render(<Video15 />, document.getElementById('root'));
+ReactDOM.render(<Video18 />, document.getElementById('root'));
