@@ -19,6 +19,7 @@ class App extends React.Component {
     return (
       <div>
         <Widget update={this.update.bind(this)} />
+        <Button>A <Heart /> React</Button>
         <h1>{this.state.txt}</h1>
       </div>
     )
@@ -26,6 +27,8 @@ class App extends React.Component {
 }
 
 const Widget = (props) => <input type='text' onChange={props.update}></input>
+const Button = (props) => <button>{props.children}</button>
+const Heart = () => <span>&hearts;</span>
 
 // const App = () => <h1>Olala!</h1>
 App.propTypes = {
